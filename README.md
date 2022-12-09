@@ -1,6 +1,6 @@
 # cpsc349-project4
 
-Group eight
+Group eight:
 ``` 
 - Edwin Peraza
 - Nathan Kim

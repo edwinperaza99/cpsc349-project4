@@ -1,0 +1,29 @@
+{
+	"name": "cpsc349-project4",
+	"version": "1.0.0",
+	"description": "CPSC 349 - Fall 2022 - Project 4",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"pocketbase": "./pocketbase serve",
+		"esbuild": "esbuild src/app.jsx --outfile=pb_public/app.js --watch",
+		"browsersync": "browser-sync http://localhost:8090 --files 'pb_public/**/*'",
+		"tailwind": "npx tailwindcss -i ./src/input.css -o ./pb_public/output.css --watch",
+		"start": "npm-run-all --parallel esbuild pocketbase browsersync tailwind"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/edwinperaza99/cpsc349-project4.git"
+	},
+	"author": "Edwin Peraza",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/edwinperaza99/cpsc349-project4/issues"
+	},
+	"homepage": "https://github.com/edwinperaza99/cpsc349-project4#readme",
+	"devDependencies": {
+		"esbuild": "^0.16.3",
+		"npm-run-all": "^4.1.5",
+		"tailwindcss": "^3.2.4"
+	}
+}

@@ -8,55 +8,41 @@ root.render(
   /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement(App, null))
 );
 function App() {
-  return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h1", { className: "bg-red-900" }, "Hello, ", authData.admin.email));
+  return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email));
 }
 function NavBar() {
-  return /* @__PURE__ */ React.createElement("div", { className: "navbar bg-base-100" }, /* @__PURE__ */ React.createElement("div", { className: "navbar-start" }, /* @__PURE__ */ React.createElement("div", { className: "dropdown" }, /* @__PURE__ */ React.createElement("label", { tabIndex: 0, className: "btn btn-ghost lg:hidden" }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("header", { className: "text-gray-400 bg-gray-900 body-font" }, /* @__PURE__ */ React.createElement("div", { className: "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" }, /* @__PURE__ */ React.createElement("a", { className: "flex title-font font-medium items-center text-white mb-4 md:mb-0" }, /* @__PURE__ */ React.createElement(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
-      className: "h-5 w-5",
       fill: "none",
-      viewBox: "0 0 24 24",
-      stroke: "currentColor"
-    },
-    /* @__PURE__ */ React.createElement(
-      "path",
-      {
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "2",
-        d: "M4 6h16M4 12h8m-8 6h16"
-      }
-    )
-  )), /* @__PURE__ */ React.createElement(
-    "ul",
-    {
-      tabIndex: 0,
-      className: "menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-    },
-    /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Item 1")),
-    /* @__PURE__ */ React.createElement("li", { tabIndex: 0 }, /* @__PURE__ */ React.createElement("a", { className: "justify-between" }, "Parent", /* @__PURE__ */ React.createElement(
-      "svg",
-      {
-        className: "fill-current",
-        xmlns: "http://www.w3.org/2000/svg",
-        width: "24",
-        height: "24",
-        viewBox: "0 0 24 24"
-      },
-      /* @__PURE__ */ React.createElement("path", { d: "M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" })
-    )), /* @__PURE__ */ React.createElement("ul", { className: "p-2" }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Submenu 1")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Submenu 2")))),
-    /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Item 3"))
-  )), /* @__PURE__ */ React.createElement("a", { className: "btn btn-ghost normal-case text-xl" }, "daisyUI")), /* @__PURE__ */ React.createElement("div", { className: "navbar-center hidden lg:flex" }, /* @__PURE__ */ React.createElement("ul", { className: "menu menu-horizontal px-1" }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Item 1")), /* @__PURE__ */ React.createElement("li", { tabIndex: 0 }, /* @__PURE__ */ React.createElement("a", null, "Parent", /* @__PURE__ */ React.createElement(
-    "svg",
-    {
-      className: "fill-current",
-      xmlns: "http://www.w3.org/2000/svg",
-      width: "20",
-      height: "20",
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      className: "w-10 h-10 text-white p-2 bg-green-500 rounded-full",
       viewBox: "0 0 24 24"
     },
-    /* @__PURE__ */ React.createElement("path", { d: "M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" })
-  )), /* @__PURE__ */ React.createElement("ul", { className: "p-2" }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Submenu 1")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Submenu 2")))), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", null, "Item 3")))), /* @__PURE__ */ React.createElement("div", { className: "navbar-end" }, /* @__PURE__ */ React.createElement("a", { className: "btn" }, "Get started")));
+    /* @__PURE__ */ React.createElement("path", { d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" })
+  ), /* @__PURE__ */ React.createElement("span", { className: "ml-3 text-xl" }, "Santa Please!")), /* @__PURE__ */ React.createElement("nav", { className: "md:ml-auto flex flex-wrap items-center text-base justify-center" }, /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white" }, "About Us"), /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white" }, "Sign Up")), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      className: "inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0",
+      "control-id": "ControlID-86"
+    },
+    "Log In",
+    /* @__PURE__ */ React.createElement(
+      "svg",
+      {
+        fill: "none",
+        stroke: "currentColor",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: 2,
+        className: "w-4 h-4 ml-1",
+        viewBox: "0 0 24 24"
+      },
+      /* @__PURE__ */ React.createElement("path", { d: "M5 12h14M12 5l7 7-7 7" })
+    )
+  )));
 }

@@ -1,5 +1,7 @@
-const USERNAME = "ADMIN_EMAIL";
-const PASSWORD = "ADMIN_PASSWORD";
+// import "./output.css";
+
+const USERNAME = "edwinperaza@csu.fullerton.edu";
+const PASSWORD = "pocketbaseproject";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -10,20 +12,20 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
 	<React.StrictMode>
-		<navBar />
-        <App />
+		<NavBar />
+		<App />
 	</React.StrictMode>
 );
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Hello, {authData.admin.email}</h1>
+			<h1 className="bg-red-900">Hello, {authData.admin.email}</h1>
 		</div>
 	);
 }
 
-function navBar() {
+function NavBar() {
 	return (
 		<div className="navbar bg-base-100">
 			<div className="navbar-start">

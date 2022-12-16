@@ -1,4 +1,4 @@
-// import NavBar from "./NavBar";
+// import NavBar from "./components/NavBar";
 
 const USERNAME = "edwinperaza@csu.fullerton.edu";
 const PASSWORD = "pocketbaseproject";
@@ -13,63 +13,116 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
+    <SecondNav />
   </React.StrictMode>
 );
 
 function App() {
+  let Component;
+  switch (window.location.pathname) {
+    case "/":
+      Component = Main;
+      break;
+    case "/About":
+      Component = About;
+      break;
+    case "/SignIn":
+      Component = SignIn;
+      break;
+    case "/Forgot":
+      Component = Forgot;
+      break;
+    case "/LogIn":
+      Component = LogIn;
+      break;
+  }
   return (
-    <div className="App">
-      <h1 className="bg-blue-900 text-red-700">
-        Hello, {authData.admin.email}
-      </h1>
-    </div>
+    <>
+      <NavBar />
+      <div className="App">
+        <h1 className="bg-blue-900 text-red-700">
+          Hello, {authData.admin.email}
+        </h1>
+      </div>
+      <Component />
+      <Footer />
+    </>
   );
 }
 
-// function NavBar() {
-// 	return (
-// 		<header className="text-gray-400 bg-gray-900 body-font">
-// 			<div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-// 				<a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-// 					<svg
-// 						xmlns="http://www.w3.org/2000/svg"
-// 						fill="none"
-// 						stroke="currentColor"
-// 						strokeLinecap="round"
-// 						strokeLinejoin="round"
-// 						strokeWidth={2}
-// 						className="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
-// 						viewBox="0 0 24 24"
-// 					>
-// 						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-// 					</svg>
-// 					<span className="ml-3 text-xl">Santa Please!</span>
-// 				</a>
-// 				<nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-// 					<a className="mr-5 hover:text-white">About Us</a>
-// 					<a className="mr-5 hover:text-white">Sign Up</a>
-// 				</nav>
-// 				<button
-// 					className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
-// 					control-id="ControlID-86"
-// 				>
-// 					Log In
-// 					<svg
-// 						fill="none"
-// 						stroke="currentColor"
-// 						strokeLinecap="round"
-// 						strokeLinejoin="round"
-// 						strokeWidth={2}
-// 						className="w-4 h-4 ml-1"
-// 						viewBox="0 0 24 24"
-// 					>
-// 						<path d="M5 12h14M12 5l7 7-7 7" />
-// 					</svg>
-// 				</button>
-// 			</div>
-// 		</header>
-// 	);
-// }
+function Main() {
+  return (
+    <main>
+      <p>Use NavBar</p>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+          <img
+            src="https://placeimg.com/260/400/arch"
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">Welcome!</h1>
+            <p className="py-6">
+              Create your own wishlist with all your favorite products. Send
+              your wishlist to all your friends!
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+function NavBar() {
+  return (
+    <header className="text-gray-400 bg-gray-900 body-font">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            className="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          <span className="ml-3 text-xl">Santa, Please!</span>
+        </a>
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <a className="mr-5 hover:text-white" href="/About">
+            About Us
+          </a>
+          <a className="mr-5 hover:text-white" href="/SignUp">
+            Sign Up
+          </a>
+        </nav>
+        <button
+          className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+          control-id="ControlID-86"
+        >
+          <a href="/LogIn">LogIn</a>
+
+          <svg
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            className="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </header>
+  );
+}
 
 // function SecondNav() {
 // 	return (
@@ -276,57 +329,57 @@ function App() {
 // 	);
 // }
 
-// function LogIn() {
-// 	return (
-// 		<main className="flex-grow">
-// 			<div className="flex items-center justify-center h-full my-40">
-// 				<div className="px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg">
-// 					<h3 className="text-2xl font-bold text-center">
-// 						Log in to your account
-// 					</h3>
-// 					<form action="/user/login" method="post">
-// 						<div className="mt-4">
-// 							<div>
-// 								<label className="block">Username</label>
-// 								<input
-// 									type="text"
-// 									name="username"
-// 									placeholder="Username"
-// 									className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-// 									required=""
-// 								/>
-// 							</div>
-// 							<div className="mt-4">
-// 								<label className="block">Password</label>
-// 								<input
-// 									type="password"
-// 									name="password"
-// 									placeholder="Password"
-// 									className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-// 									required=""
-// 								/>
-// 							</div>
-// 							<div className="flex items-baseline justify-between">
-// 								<button
-// 									type="submit"
-// 									className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
-// 								>
-// 									Login
-// 								</button>
-// 								<a
-// 									href="/user/forgot"
-// 									className="text-sm text-blue-600 hover:underline"
-// 								>
-// 									Forgot password?
-// 								</a>
-// 							</div>
-// 						</div>
-// 					</form>
-// 				</div>
-// 			</div>
-// 		</main>
-// 	);
-// }
+function LogIn() {
+  return (
+    <main className="flex-grow">
+      <div className="flex items-center justify-center h-full my-40">
+        <div className="px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg">
+          <h3 className="text-2xl font-bold text-center">
+            Log in to your account
+          </h3>
+          <form action="/user/login" method="post">
+            <div className="mt-4">
+              <div>
+                <label className="block">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  required=""
+                />
+              </div>
+              <div className="mt-4">
+                <label className="block">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  required=""
+                />
+              </div>
+              <div className="flex items-baseline justify-between">
+                <button
+                  type="submit"
+                  className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+                >
+                  Login
+                </button>
+                <a
+                  href="/Forgot"
+                  className="text-sm text-blue-600 hover:underline"
+                >
+                  Forgot password?
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  );
+}
 
 // function Forgot() {
 // 	return (

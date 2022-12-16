@@ -14,22 +14,63 @@ root.render(
 	<React.StrictMode>
 		<App />
 		<SecondNav />
-		<About />
-		<SignUp />
-		<LogIn />
-		<Footer />
-		<Forgot />
 	</React.StrictMode>
 );
 
 function App() {
+	let Component;
+	switch (window.location.pathname) {
+		case "/":
+			Component = Main;
+			break;
+		case "/About":
+			Component = About;
+			break;
+		case "/SignIn":
+			Component = SignIn;
+			break;
+		case "/Forgot":
+			Component = Forgot;
+			break;
+		case "/LogIn":
+			Component = LogIn;
+			break;
+	}
 	return (
-		<div className="App">
+		<>
 			<NavBar />
-			<h1 className="bg-blue-900 text-red-700">
-				Hello, {authData.admin.email}
-			</h1>
-		</div>
+			<div className="App">
+				<h1 className="bg-blue-900 text-red-700">
+					Hello, {authData.admin.email}
+				</h1>
+			</div>
+			<Component />
+			<Footer />
+		</>
+	);
+}
+
+function Main() {
+	return (
+		<main>
+			<p>Use NavBar</p>
+			<div className="hero min-h-screen bg-base-200">
+				<div className="hero-content flex-col lg:flex-row">
+					<img
+						src="https://placeimg.com/260/400/arch"
+						className="max-w-sm rounded-lg shadow-2xl"
+					/>
+					<div>
+						<h1 className="text-5xl font-bold">Welcome!</h1>
+						<p className="py-6">
+							Create your own wishlist with all your favorite products. Send
+							your wishlist to all your friends!
+						</p>
+						<button className="btn btn-primary">Get Started</button>
+					</div>
+				</div>
+			</div>
+		</main>
 	);
 }
 
@@ -50,17 +91,22 @@ function NavBar() {
 					>
 						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
 					</svg>
-					<span className="ml-3 text-xl">Santa Please!</span>
+					<span className="ml-3 text-xl">Santa, Please!</span>
 				</a>
 				<nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-					<a className="mr-5 hover:text-white">About Us</a>
-					<a className="mr-5 hover:text-white">Sign Up</a>
+					<a className="mr-5 hover:text-white" href="/About">
+						About Us
+					</a>
+					<a className="mr-5 hover:text-white" href="/SignUp">
+						Sign Up
+					</a>
 				</nav>
 				<button
 					className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
 					control-id="ControlID-86"
 				>
-					Log In
+					<a href="/LogIn">LogIn</a>
+
 					<svg
 						fill="none"
 						stroke="currentColor"
@@ -321,7 +367,7 @@ function LogIn() {
 									Login
 								</button>
 								<a
-									href="/user/forgot"
+									href="/Forgot"
 									className="text-sm text-blue-600 hover:underline"
 								>
 									Forgot password?

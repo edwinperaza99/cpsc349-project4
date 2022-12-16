@@ -5,10 +5,10 @@ const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD);
 console.log(authData);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null), /* @__PURE__ */ React.createElement(About, null), /* @__PURE__ */ React.createElement(SignUp, null), /* @__PURE__ */ React.createElement(LogIn, null), /* @__PURE__ */ React.createElement(Footer, null), /* @__PURE__ */ React.createElement(Forgot, null))
+  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null), /* @__PURE__ */ React.createElement(About, null), /* @__PURE__ */ React.createElement(SignUp, null), /* @__PURE__ */ React.createElement(LogIn, null), /* @__PURE__ */ React.createElement(Footer, null), /* @__PURE__ */ React.createElement(Forgot, null))
 );
 function App() {
-  return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email));
+  return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email));
 }
 function NavBar() {
   return /* @__PURE__ */ React.createElement("header", { className: "text-gray-400 bg-gray-900 body-font" }, /* @__PURE__ */ React.createElement("div", { className: "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" }, /* @__PURE__ */ React.createElement("a", { className: "flex title-font font-medium items-center text-white mb-4 md:mb-0" }, /* @__PURE__ */ React.createElement(

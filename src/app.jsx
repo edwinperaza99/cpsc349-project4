@@ -1,4 +1,4 @@
-// import NavBar from "./NavBar";
+// import NavBar from "./components/NavBar";
 
 const USERNAME = "edwinperaza@csu.fullerton.edu";
 const PASSWORD = "pocketbaseproject";
@@ -12,7 +12,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
 	<React.StrictMode>
-		<NavBar />
 		<App />
 		<SecondNav />
 		<About />
@@ -26,6 +25,7 @@ root.render(
 function App() {
 	return (
 		<div className="App">
+			<NavBar />
 			<h1 className="bg-blue-900 text-red-700">
 				Hello, {authData.admin.email}
 			</h1>

@@ -16,7 +16,10 @@ root.render(
 		<App />
 		<SecondNav />
 		<About />
+		<SignUp />
+		<LogIn />
 		<Footer />
+		<Forgot />
 	</React.StrictMode>
 );
 
@@ -223,3 +226,150 @@ function Footer() {
 	);
 }
 //
+
+function SignUp() {
+	return (
+		<main class="flex-grow">
+			<div class="flex items-center justify-center h-full my-40">
+				<div class="px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg">
+					<h2 class="text-2xl font-bold text-center">
+						Create Your Account Today!
+					</h2>
+					<form action="/user/signup" method="post">
+						<div class="mt-4">
+							<div class="mt-4">
+								<label class="block">Username</label>
+								<input
+									type="text"
+									name="username"
+									placeholder="Username"
+									class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									required
+								/>
+							</div>
+							<div class="mt-4">
+								<label class="block">Email</label>
+								<input
+									type="email"
+									name="email"
+									placeholder="Email"
+									class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									required
+								/>
+							</div>
+							<div class="mt-4">
+								<label class="block">Password</label>
+								<input
+									type="password"
+									name="password"
+									placeholder="Password"
+									class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									required
+								/>
+							</div>
+							<div class="flex items-baseline justify-between">
+								<button
+									type="submit"
+									class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+								>
+									Sign up
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	);
+}
+
+function LogIn() {
+	return (
+		<main className="flex-grow">
+			<div className="flex items-center justify-center h-full my-40">
+				<div className="px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg">
+					<h3 className="text-2xl font-bold text-center">
+						Log in to your account
+					</h3>
+					<form action="/user/login" method="post">
+						<div className="mt-4">
+							<div>
+								<label className="block">Username</label>
+								<input
+									type="text"
+									name="username"
+									placeholder="Username"
+									className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									required=""
+								/>
+							</div>
+							<div className="mt-4">
+								<label className="block">Password</label>
+								<input
+									type="password"
+									name="password"
+									placeholder="Password"
+									className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									required=""
+								/>
+							</div>
+							<div className="flex items-baseline justify-between">
+								<button
+									type="submit"
+									className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+								>
+									Login
+								</button>
+								<a
+									href="/user/forgot"
+									className="text-sm text-blue-600 hover:underline"
+								>
+									Forgot password?
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	);
+}
+
+function Forgot() {
+	return (
+		<main className="flex-grow">
+			<div className="flex items-center justify-center h-full my-40">
+				<div className="px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg">
+					<h3 className="text-2xl font-bold text-center">
+						Forgot your password?
+					</h3>
+					<p className="mt-4">
+						We will send a link to your associated email account
+					</p>
+					<form action="/user/forgot" method="post">
+						<div className="mt-4">
+							<div className="">
+								<label className="block font-bold">Username</label>
+								<input
+									type="text"
+									name="username"
+									placeholder="Your Username"
+									className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									required=""
+								/>
+							</div>
+							<div className="flex items-baseline justify-center">
+								<button
+									type="submit"
+									className="px-6 py-2 mt-8 w-full text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+								>
+									Reset my password
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	);
+}

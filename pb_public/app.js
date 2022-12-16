@@ -5,7 +5,7 @@ const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD);
 console.log(authData);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null), /* @__PURE__ */ React.createElement(About, null))
+  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null), /* @__PURE__ */ React.createElement(About, null), /* @__PURE__ */ React.createElement(SignUp, null), /* @__PURE__ */ React.createElement(LogIn, null), /* @__PURE__ */ React.createElement(Footer, null), /* @__PURE__ */ React.createElement(Forgot, null))
 );
 function App() {
   return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email));
@@ -124,5 +124,96 @@ function About() {
   ), /* @__PURE__ */ React.createElement("p", null, "Marl Rico"))))));
 }
 function Footer() {
-  return /* @__PURE__ */ React.createElement("footer", { className: "bg-gray-200 text-center lg:text-left" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-700 text-center p-4" }, " ", "\xA9 2022 Copyright: Group 12", " "));
+  return /* @__PURE__ */ React.createElement("footer", { className: "bg-gray-200 text-center lg:text-left" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-700 text-center p-4" }, " ", "\xA9 2022 Copyright: Group 8", " "));
+}
+function SignUp() {
+  return /* @__PURE__ */ React.createElement("main", { class: "flex-grow" }, /* @__PURE__ */ React.createElement("div", { class: "flex items-center justify-center h-full my-40" }, /* @__PURE__ */ React.createElement("div", { class: "px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h2", { class: "text-2xl font-bold text-center" }, "Create Your Account Today!"), /* @__PURE__ */ React.createElement("form", { action: "/user/signup", method: "post" }, /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("label", { class: "block" }, "Username"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "text",
+      name: "username",
+      placeholder: "Username",
+      class: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600",
+      required: true
+    }
+  )), /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("label", { class: "block" }, "Email"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "email",
+      name: "email",
+      placeholder: "Email",
+      class: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600",
+      required: true
+    }
+  )), /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("label", { class: "block" }, "Password"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "password",
+      name: "password",
+      placeholder: "Password",
+      class: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600",
+      required: true
+    }
+  )), /* @__PURE__ */ React.createElement("div", { class: "flex items-baseline justify-between" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      type: "submit",
+      class: "px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+    },
+    "Sign up"
+  )))))));
+}
+function LogIn() {
+  return /* @__PURE__ */ React.createElement("main", { className: "flex-grow" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center h-full my-40" }, /* @__PURE__ */ React.createElement("div", { className: "px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h3", { className: "text-2xl font-bold text-center" }, "Log in to your account"), /* @__PURE__ */ React.createElement("form", { action: "/user/login", method: "post" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("label", { className: "block" }, "Username"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "text",
+      name: "username",
+      placeholder: "Username",
+      className: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600",
+      required: ""
+    }
+  )), /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("label", { className: "block" }, "Password"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "password",
+      name: "password",
+      placeholder: "Password",
+      className: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600",
+      required: ""
+    }
+  )), /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline justify-between" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      type: "submit",
+      className: "px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+    },
+    "Login"
+  ), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: "/user/forgot",
+      className: "text-sm text-blue-600 hover:underline"
+    },
+    "Forgot password?"
+  )))))));
+}
+function Forgot() {
+  return /* @__PURE__ */ React.createElement("main", { className: "flex-grow" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center h-full my-40" }, /* @__PURE__ */ React.createElement("div", { className: "px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h3", { className: "text-2xl font-bold text-center" }, "Forgot your password?"), /* @__PURE__ */ React.createElement("p", { className: "mt-4" }, "We will send a link to your associated email account"), /* @__PURE__ */ React.createElement("form", { action: "/user/forgot", method: "post" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("div", { className: "" }, /* @__PURE__ */ React.createElement("label", { className: "block font-bold" }, "Username"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "text",
+      name: "username",
+      placeholder: "Your Username",
+      className: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600",
+      required: ""
+    }
+  )), /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline justify-center" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      type: "submit",
+      className: "px-6 py-2 mt-8 w-full text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+    },
+    "Reset my password"
+  )))))));
 }

@@ -5,11 +5,7 @@ const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD);
 console.log(authData);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-<<<<<<< HEAD
-  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null))
-=======
   /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null))
->>>>>>> 912ecbc9cfb5983633e14064aad57c80fb28e279
 );
 function App() {
   let Component;
@@ -41,8 +37,6 @@ function Main() {
     }
   ), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", { className: "text-5xl font-bold" }, "Welcome!"), /* @__PURE__ */ React.createElement("p", { className: "py-6" }, "Create your own wishlist with all your favorite products. Send your wishlist to all your friends!"), /* @__PURE__ */ React.createElement("button", { className: "btn btn-primary" }, "Get Started")))));
 }
-<<<<<<< HEAD
-=======
 function NavBar() {
   return /* @__PURE__ */ React.createElement("header", { className: "text-gray-400 bg-gray-900 body-font" }, /* @__PURE__ */ React.createElement("div", { className: "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" }, /* @__PURE__ */ React.createElement("a", { className: "flex title-font font-medium items-center text-white mb-4 md:mb-0" }, /* @__PURE__ */ React.createElement(
     "svg",
@@ -108,53 +102,85 @@ function SecondNav() {
   )))))));
 }
 function About() {
-  return /* @__PURE__ */ React.createElement("main", { className: "flex-grow" }, /* @__PURE__ */ React.createElement("h1", { className: "mt-6 text-center text-3xl font-bold mb-2" }, "About Us"), /* @__PURE__ */ React.createElement("hr", { className: "block border-gray-800 max-w-5xl mx-auto w-[98%] mb-6" }), /* @__PURE__ */ React.createElement("div", { className: "px-4 max-w-4xl mx-auto flex flex-col gap-10" }, /* @__PURE__ */ React.createElement("article", null, /* @__PURE__ */ React.createElement("h3", { className: "about-heading" }, "Our mission"), /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-4" }, /* @__PURE__ */ React.createElement("p", null, "Here at FavFlicks, we are passionate about all things cinema and wanted to help others keep track of all their favorite films! With this website, you can add different movie categories, each with their own description, and your favorite movies from each category. You can even add your personal rating of the film!"), /* @__PURE__ */ React.createElement("p", null, "Our web application was built using", /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("div", { class: "px-4 py-16 bg-green-800 " }, /* @__PURE__ */ React.createElement("section", { class: "max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12" }, /* @__PURE__ */ React.createElement("h2", { class: "max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-neutral-50 sm:text-4xl md:mx-auto" }, /* @__PURE__ */ React.createElement("span", { class: "relative inline-block" }, /* @__PURE__ */ React.createElement(
+    "svg",
+    {
+      viewBox: "0 0 52 24",
+      fill: "currentColor",
+      class: "absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+    },
+    /* @__PURE__ */ React.createElement("defs", null, /* @__PURE__ */ React.createElement(
+      "pattern",
+      {
+        id: "1d4040f3-9f3e-4ac7-b117-7d4009658ced",
+        x: "0",
+        y: "0",
+        width: ".135",
+        height: ".30"
+      },
+      /* @__PURE__ */ React.createElement("circle", { cx: "1", cy: "1", r: ".7" })
+    ))
+  ), /* @__PURE__ */ React.createElement("span", { class: "relative" }, "Welcome our lovely devs"))), /* @__PURE__ */ React.createElement("p", { class: "text-base text-neutral-50 md:text-lg" }, "The masterminds behind the Santa, Please!")), /* @__PURE__ */ React.createElement("section", { class: "flex flex-col gap-3 items-center justify-center lg:flex-row text-neutral-50s" }, /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 rounded-xl border-neutral-50 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-lime-500 group" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col justify-center items-center gap-10" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col items-center gap-6" }, /* @__PURE__ */ React.createElement("div", { class: "flex gap-6 items-center" }, /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      src: "https://avatars.githubusercontent.com/u/89877041?v=4",
+      alt: "Natan K. github profile picture",
+      class: "w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"
+    }
+  ), /* @__PURE__ */ React.createElement("h1", { class: "text-2xl text-neutral-50 font-semibold transition duration-200 ease-linear hover:text-slate-900" }, "Nathan Kim")), /* @__PURE__ */ React.createElement("p", { class: "transition duration-200 ease-linear text-neutral-50 hover:text-slate-900 text-center" }, '"Add what you did"'), /* @__PURE__ */ React.createElement("p", { class: "text-neutral-50 italic w-64 h-full transition duration-200 ease-linear hover:text-slate-900 text-center text-sm" }, '"Quotes?"')), /* @__PURE__ */ React.createElement(
     "a",
     {
-      className: "about-link",
-      href: "https://remaketheweb.com/",
+      href: "https://github.com/mploythai/cpsc349-proj2",
       target: "_blank",
-      rel: "noreferrer noopener"
+      class: "w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-slate-900 transition duration-200 rounded shadow-md bg-neutral-50 hover:bg-green-700 hover:scale-105"
     },
-    "React"
-  ), "for functionality / interactivity and", /* @__PURE__ */ React.createElement(
+    "GitHub Repo"
+  ))), /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 rounded-xl border-neutral-50 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-lime-500 group" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col justify-center items-center gap-10" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col items-center gap-6" }, /* @__PURE__ */ React.createElement("div", { class: "flex gap-6 items-center" }, /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      src: "https://avatars.githubusercontent.com/edwinperaza99",
+      alt: "Edwin P. github profile picture",
+      class: "w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"
+    }
+  ), /* @__PURE__ */ React.createElement("h1", { class: "text-2xl text-neutral-50 font-semibold transition duration-200 ease-linear hover:text-slate-900" }, "Edwin Peraza")), /* @__PURE__ */ React.createElement("p", { class: "transition duration-200 ease-linear text-neutral-50 hover:text-slate-900 text-center" }, '"Add what you did"'), /* @__PURE__ */ React.createElement("p", { class: "text-neutral-50 italic w-64 h-full transition duration-200 ease-linear hover:text-slate-900 text-center text-sm" }, '"Quotes?"')), /* @__PURE__ */ React.createElement(
     "a",
     {
-      className: "about-link",
-      href: "https://tailwindcss.com/",
+      href: "https://github.com/edwinperaza99",
       target: "_blank",
-      rel: "noreferrer noopener"
+      class: "w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-slate-900 transition duration-200 rounded shadow-md bg-neutral-50 hover:bg-green-700 hover:scale-105"
     },
-    "Tailwind CSS"
-  ), "for styling!"))), /* @__PURE__ */ React.createElement("article", null, /* @__PURE__ */ React.createElement("h3", { className: "about-heading" }, "Team members:"), /* @__PURE__ */ React.createElement("div", { className: "flex justify-around text-center" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(
+    "GitHub Repo"
+  ))), /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 rounded-xl border-neutral-50 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-lime-500 group" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col justify-center items-center gap-10" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col items-center gap-6" }, /* @__PURE__ */ React.createElement("div", { class: "flex gap-6 items-center" }, /* @__PURE__ */ React.createElement(
     "img",
     {
-      src: "../assets/images/clapperboard.png",
-      className: "about-img",
-      alt: "clapperboard"
+      src: "https://avatars.githubusercontent.com/mrmarlrico",
+      alt: "Marl R. github profile picture",
+      class: "w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"
     }
-  ), /* @__PURE__ */ React.createElement("p", null, "Edwin Peraza")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(
+  ), /* @__PURE__ */ React.createElement("h1", { class: "text-2xl text-neutral-50 font-semibold transition duration-200 ease-linear hover:text-slate-900" }, "Marl Rico")), /* @__PURE__ */ React.createElement("p", { class: "transition duration-200 ease-linear text-neutral-50 hover:text-slate-900 text-center" }, '"Add what you did"'), /* @__PURE__ */ React.createElement("p", { class: "text-neutral-50 italic w-64 h-full transition duration-200 ease-linear hover:text-slate-900 text-center text-sm" }, '"Quotes?"')), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: "https://github.com/mrmarlrico",
+      target: "_blank",
+      class: "w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-slate-900 transition duration-200 rounded shadow-md bg-neutral-50 hover:bg-green-700 hover:scale-105"
+    },
+    "GitHub Repo"
+  ))), /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 rounded-xl border-neutral-50 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-lime-500 group" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col justify-center items-center gap-10" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col items-center gap-6" }, /* @__PURE__ */ React.createElement("div", { class: "flex gap-6 items-center" }, /* @__PURE__ */ React.createElement(
     "img",
     {
-      src: "../assets/images/film-camera.svg",
-      className: "about-img",
-      alt: "camera"
+      src: "https://avatars.githubusercontent.com/ethanton0927",
+      alt: "Ethan T. github profile picture",
+      class: "w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"
     }
-  ), /* @__PURE__ */ React.createElement("p", null, "Nathan Kim")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(
-    "img",
+  ), /* @__PURE__ */ React.createElement("h1", { class: "text-2xl text-neutral-50 font-semibold transition duration-200 ease-linear hover:text-slate-900" }, "Ethan Ton")), /* @__PURE__ */ React.createElement("p", { class: "transition duration-200 ease-linear text-neutral-50 hover:text-slate-900 text-center" }, '"Add what you did"'), /* @__PURE__ */ React.createElement("p", { class: "text-neutral-50 italic w-64 h-full transition duration-200 ease-linear hover:text-slate-900 text-center text-sm" }, '"Quotes?"')), /* @__PURE__ */ React.createElement(
+    "a",
     {
-      src: "../assets/images/film-strip.png",
-      className: "about-img",
-      alt: "film strip"
-    }
-  ), /* @__PURE__ */ React.createElement("p", null, "Ethan Ton")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(
-    "img",
-    {
-      src: "../assets/images/popcorn.svg",
-      className: "about-img",
-      alt: "popcorn"
-    }
-  ), /* @__PURE__ */ React.createElement("p", null, "Marl Rico"))))));
+      href: "https://github.com/ethanton0927",
+      target: "_blank",
+      class: "w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-slate-900 transition duration-200 rounded shadow-md bg-neutral-50 hover:bg-green-700 hover:scale-105"
+    },
+    "GitHub Repo"
+  )))));
 }
 function Footer() {
   return /* @__PURE__ */ React.createElement("footer", { className: "bg-gray-200 text-center lg:text-left" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-700 text-center p-4" }, " ", "\xA9 2022 Copyright: Group 8", " "));
@@ -250,4 +276,3 @@ function Forgot() {
     "Reset my password"
   )))))));
 }
->>>>>>> 912ecbc9cfb5983633e14064aad57c80fb28e279

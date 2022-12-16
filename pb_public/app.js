@@ -5,10 +5,37 @@ const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD);
 console.log(authData);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null), /* @__PURE__ */ React.createElement(About, null), /* @__PURE__ */ React.createElement(SignUp, null), /* @__PURE__ */ React.createElement(LogIn, null), /* @__PURE__ */ React.createElement(Footer, null), /* @__PURE__ */ React.createElement(Forgot, null))
+  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null))
 );
 function App() {
-  return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email));
+  let Component;
+  switch (window.location.pathname) {
+    case "/":
+      Component = Main;
+      break;
+    case "/About":
+      Component = About;
+      break;
+    case "/SignIn":
+      Component = SignIn;
+      break;
+    case "/Forgot":
+      Component = Forgot;
+      break;
+    case "/LogIn":
+      Component = LogIn;
+      break;
+  }
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email)), /* @__PURE__ */ React.createElement(Component, null), /* @__PURE__ */ React.createElement(Footer, null));
+}
+function Main() {
+  return /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement("p", null, "Use NavBar"), /* @__PURE__ */ React.createElement("div", { className: "hero min-h-screen bg-base-200" }, /* @__PURE__ */ React.createElement("div", { className: "hero-content flex-col lg:flex-row" }, /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      src: "https://placeimg.com/260/400/arch",
+      className: "max-w-sm rounded-lg shadow-2xl"
+    }
+  ), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", { className: "text-5xl font-bold" }, "Welcome!"), /* @__PURE__ */ React.createElement("p", { className: "py-6" }, "Create your own wishlist with all your favorite products. Send your wishlist to all your friends!"), /* @__PURE__ */ React.createElement("button", { className: "btn btn-primary" }, "Get Started")))));
 }
 function NavBar() {
   return /* @__PURE__ */ React.createElement("header", { className: "text-gray-400 bg-gray-900 body-font" }, /* @__PURE__ */ React.createElement("div", { className: "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" }, /* @__PURE__ */ React.createElement("a", { className: "flex title-font font-medium items-center text-white mb-4 md:mb-0" }, /* @__PURE__ */ React.createElement(
@@ -24,13 +51,13 @@ function NavBar() {
       viewBox: "0 0 24 24"
     },
     /* @__PURE__ */ React.createElement("path", { d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" })
-  ), /* @__PURE__ */ React.createElement("span", { className: "ml-3 text-xl" }, "Santa Please!")), /* @__PURE__ */ React.createElement("nav", { className: "md:ml-auto flex flex-wrap items-center text-base justify-center" }, /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white" }, "About Us"), /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white" }, "Sign Up")), /* @__PURE__ */ React.createElement(
+  ), /* @__PURE__ */ React.createElement("span", { className: "ml-3 text-xl" }, "Santa, Please!")), /* @__PURE__ */ React.createElement("nav", { className: "md:ml-auto flex flex-wrap items-center text-base justify-center" }, /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white", href: "/About" }, "About Us"), /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white", href: "/SignUp" }, "Sign Up")), /* @__PURE__ */ React.createElement(
     "button",
     {
       className: "inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0",
       "control-id": "ControlID-86"
     },
-    "Log In",
+    /* @__PURE__ */ React.createElement("a", { href: "/LogIn" }, "LogIn"),
     /* @__PURE__ */ React.createElement(
       "svg",
       {
@@ -192,7 +219,7 @@ function LogIn() {
   ), /* @__PURE__ */ React.createElement(
     "a",
     {
-      href: "/user/forgot",
+      href: "/Forgot",
       className: "text-sm text-blue-600 hover:underline"
     },
     "Forgot password?"

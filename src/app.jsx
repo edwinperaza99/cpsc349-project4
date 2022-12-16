@@ -140,7 +140,7 @@ function SecondNav() {
 								<li>
 									<a
 										className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-300"
-										href="/aboutus"
+										href="/About"
 										aria-label="About us"
 										title="About us"
 									>
@@ -153,7 +153,7 @@ function SecondNav() {
 							<li>
 								<a
 									className="group relative inline-block overflow-hidden border border-blue-300 px-8 py-3 focus:outline-none focus:ring"
-									href="/user/signup"
+									href="/SignUp"
 								>
 									<span className="absolute inset-y-0 left-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" />
 									<span className="relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white">
@@ -164,7 +164,7 @@ function SecondNav() {
 							<li>
 								<a
 									className="group relative inline-block overflow-hidden border border-blue-300 px-9 py-3 focus:outline-none focus:ring"
-									href="/user/login"
+									href="LogIn"
 								>
 									<span className="absolute inset-y-0 right-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" />
 									<span className="relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white">

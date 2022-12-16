@@ -26,8 +26,8 @@ function App() {
 		case "/About":
 			Component = About;
 			break;
-		case "/SignIn":
-			Component = SignIn;
+		case "/SignUp":
+			Component = SignUp;
 			break;
 		case "/Forgot":
 			Component = Forgot;

@@ -14,7 +14,9 @@ root.render(
 	<React.StrictMode>
 		<NavBar />
 		<App />
+		<SecondNav />
 		<About />
+		<Footer />
 	</React.StrictMode>
 );
 
@@ -73,142 +75,150 @@ function NavBar() {
 	);
 }
 
-function About() {
+function SecondNav() {
 	return (
-		<>
-			<header>
-				<div className="bg-gray-900">
-					<div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-						<div className="relative flex items-center justify-between">
-							<div className="flex items-center">
-								<a href="/" className="inline-flex items-center mr-8">
-									<span className="ml-2 text-xl font-bold tracking-wide text-gray-100 hover:text-blue-300">
-										FavFlicks
-									</span>
-								</a>
-								<ul className="flex items-center space-x-8 lg:flex bar-element">
-									<li>
-										<a
-											className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-300"
-											href="/aboutus"
-											aria-label="About us"
-											title="About us"
-										>
-											About us
-										</a>
-									</li>
-								</ul>
-							</div>
+		<header>
+			<div className="bg-gray-900">
+				<div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+					<div className="relative flex items-center justify-between">
+						<div className="flex items-center">
+							<a href="/" className="inline-flex items-center mr-8">
+								<span className="ml-2 text-xl font-bold tracking-wide text-gray-100 hover:text-blue-300">
+									FavFlicks
+								</span>
+							</a>
 							<ul className="flex items-center space-x-8 lg:flex bar-element">
 								<li>
 									<a
-										className="group relative inline-block overflow-hidden border border-blue-300 px-8 py-3 focus:outline-none focus:ring"
-										href="/user/signup"
+										className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-300"
+										href="/aboutus"
+										aria-label="About us"
+										title="About us"
 									>
-										<span className="absolute inset-y-0 left-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" />
-										<span className="relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white">
-											Sign up
-										</span>
-									</a>
-								</li>
-								<li>
-									<a
-										className="group relative inline-block overflow-hidden border border-blue-300 px-9 py-3 focus:outline-none focus:ring"
-										href="/user/login"
-									>
-										<span className="absolute inset-y-0 right-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" />
-										<span className="relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white">
-											Log in
-										</span>
+										About us
 									</a>
 								</li>
 							</ul>
 						</div>
+						<ul className="flex items-center space-x-8 lg:flex bar-element">
+							<li>
+								<a
+									className="group relative inline-block overflow-hidden border border-blue-300 px-8 py-3 focus:outline-none focus:ring"
+									href="/user/signup"
+								>
+									<span className="absolute inset-y-0 left-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" />
+									<span className="relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white">
+										Sign up
+									</span>
+								</a>
+							</li>
+							<li>
+								<a
+									className="group relative inline-block overflow-hidden border border-blue-300 px-9 py-3 focus:outline-none focus:ring"
+									href="/user/login"
+								>
+									<span className="absolute inset-y-0 right-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" />
+									<span className="relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white">
+										Log in
+									</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</header>
-			<main className="flex-grow">
-				<h1 className="mt-6 text-center text-3xl font-bold mb-2">About Us</h1>
-				<hr className="block border-gray-800 max-w-5xl mx-auto w-[98%] mb-6" />
-				<div className="px-4 max-w-4xl mx-auto flex flex-col gap-10">
-					<article>
-						<h3 className="about-heading">Our mission</h3>
-						<div className="flex flex-col gap-4">
-							<p>
-								Here at FavFlicks, we are passionate about all things cinema and
-								wanted to help others keep track of all their favorite films!
-								With this website, you can add different movie categories, each
-								with their own description, and your favorite movies from each
-								category. You can even add your personal rating of the film!
-							</p>
-							<p>
-								Our web application was built using
-								<a
-									className="about-link"
-									href="https://remaketheweb.com/"
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									Remake
-								</a>
-								for functionality / interactivity and
-								<a
-									className="about-link"
-									href="https://tailwindcss.com/"
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									Tailwind CSS
-								</a>
-								for styling!
-							</p>
+			</div>
+		</header>
+	);
+}
+
+function About() {
+	return (
+		<main className="flex-grow">
+			<h1 className="mt-6 text-center text-3xl font-bold mb-2">About Us</h1>
+			<hr className="block border-gray-800 max-w-5xl mx-auto w-[98%] mb-6" />
+			<div className="px-4 max-w-4xl mx-auto flex flex-col gap-10">
+				<article>
+					<h3 className="about-heading">Our mission</h3>
+					<div className="flex flex-col gap-4">
+						<p>
+							Here at FavFlicks, we are passionate about all things cinema and
+							wanted to help others keep track of all their favorite films! With
+							this website, you can add different movie categories, each with
+							their own description, and your favorite movies from each
+							category. You can even add your personal rating of the film!
+						</p>
+						<p>
+							Our web application was built using
+							<a
+								className="about-link"
+								href="https://remaketheweb.com/"
+								target="_blank"
+								rel="noreferrer noopener"
+							>
+								React
+							</a>
+							for functionality / interactivity and
+							<a
+								className="about-link"
+								href="https://tailwindcss.com/"
+								target="_blank"
+								rel="noreferrer noopener"
+							>
+								Tailwind CSS
+							</a>
+							for styling!
+						</p>
+					</div>
+				</article>
+				<article>
+					<h3 className="about-heading">Team members:</h3>
+					<div className="flex justify-around text-center">
+						<div>
+							<img
+								src="../assets/images/clapperboard.png"
+								className="about-img"
+								alt="clapperboard"
+							/>
+							<p>Edwin Peraza</p>
 						</div>
-					</article>
-					<article>
-						<h3 className="about-heading">Team members</h3>
-						<div className="flex justify-around text-center">
-							<div>
-								<img
-									src="../assets/images/clapperboard.png"
-									className="about-img"
-									alt="clapperboard"
-								/>
-								<p>Edwin Peraza</p>
-							</div>
-							<div>
-								<img
-									src="../assets/images/film-camera.svg"
-									className="about-img"
-									alt="camera"
-								/>
-								<p>Ethan Safai</p>
-							</div>
-							<div>
-								<img
-									src="../assets/images/film-strip.png"
-									className="about-img"
-									alt="film strip"
-								/>
-								<p>Ethan Ton</p>
-							</div>
-							<div>
-								<img
-									src="../assets/images/popcorn.svg"
-									className="about-img"
-									alt="popcorn"
-								/>
-								<p>Jin Huang</p>
-							</div>
+						<div>
+							<img
+								src="../assets/images/film-camera.svg"
+								className="about-img"
+								alt="camera"
+							/>
+							<p>Nathan Kim</p>
 						</div>
-					</article>
-				</div>
-			</main>
-			<footer className="bg-gray-200 text-center lg:text-left">
-				<p className="text-gray-700 text-center p-4">
-					{" "}
-					© 2022 Copyright: Group 12{" "}
-				</p>
-			</footer>
-		</>
+						<div>
+							<img
+								src="../assets/images/film-strip.png"
+								className="about-img"
+								alt="film strip"
+							/>
+							<p>Ethan Ton</p>
+						</div>
+						<div>
+							<img
+								src="../assets/images/popcorn.svg"
+								className="about-img"
+								alt="popcorn"
+							/>
+							<p>Marl Rico</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</main>
+	);
+}
+
+function Footer() {
+	return (
+		<footer className="bg-gray-200 text-center lg:text-left">
+			<p className="text-gray-700 text-center p-4">
+				{" "}
+				© 2022 Copyright: Group 8{" "}
+			</p>
+		</footer>
 	);
 }

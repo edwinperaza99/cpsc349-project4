@@ -316,10 +316,10 @@ function About() {
 									</h1>
 								</div>
 								<p className="transition duration-200 ease-linear text-neutral-50 hover:text-slate-900 text-center">
-									"Add what you did"
+									"I participated"
 								</p>
 								<p className="text-neutral-50 italic w-64 h-full transition duration-200 ease-linear hover:text-slate-900 text-center text-sm">
-									"Quotes?"
+									"This class was difficult, but I learned a lot"
 								</p>
 							</div>
 							<a

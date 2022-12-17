@@ -5,7 +5,7 @@ const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD);
 console.log(authData);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null), /* @__PURE__ */ React.createElement(SecondNav, null))
+  /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null))
 );
 function App() {
   let Component;
@@ -26,7 +26,7 @@ function App() {
       Component = LogIn;
       break;
   }
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h1", { className: "bg-blue-900 text-red-700" }, "Hello, ", authData.admin.email)), /* @__PURE__ */ React.createElement(Component, null), /* @__PURE__ */ React.createElement(Footer, null));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement("div", { className: "App" }), /* @__PURE__ */ React.createElement(Component, null));
 }
 function Main() {
   return /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement("p", null, "Use NavBar"), /* @__PURE__ */ React.createElement("div", { className: "hero min-h-screen bg-base-200" }, /* @__PURE__ */ React.createElement("div", { className: "hero-content flex-col lg:flex-row" }, /* @__PURE__ */ React.createElement(
@@ -73,36 +73,8 @@ function NavBar() {
     )
   )));
 }
-function SecondNav() {
-  return /* @__PURE__ */ React.createElement("header", null, /* @__PURE__ */ React.createElement("div", { className: "bg-gray-900" }, /* @__PURE__ */ React.createElement("div", { className: "px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "relative flex items-center justify-between" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center" }, /* @__PURE__ */ React.createElement("a", { href: "/", className: "inline-flex items-center mr-8" }, /* @__PURE__ */ React.createElement("span", { className: "ml-2 text-xl font-bold tracking-wide text-gray-100 hover:text-blue-300" }, "FavFlicks")), /* @__PURE__ */ React.createElement("ul", { className: "flex items-center space-x-8 lg:flex bar-element" }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(
-    "a",
-    {
-      className: "block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-300",
-      href: "/aboutus",
-      "aria-label": "About us",
-      title: "About us"
-    },
-    "About us"
-  )))), /* @__PURE__ */ React.createElement("ul", { className: "flex items-center space-x-8 lg:flex bar-element" }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(
-    "a",
-    {
-      className: "group relative inline-block overflow-hidden border border-blue-300 px-8 py-3 focus:outline-none focus:ring",
-      href: "/user/signup"
-    },
-    /* @__PURE__ */ React.createElement("span", { className: "absolute inset-y-0 left-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" }),
-    /* @__PURE__ */ React.createElement("span", { className: "relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white" }, "Sign up")
-  )), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(
-    "a",
-    {
-      className: "group relative inline-block overflow-hidden border border-blue-300 px-9 py-3 focus:outline-none focus:ring",
-      href: "/user/login"
-    },
-    /* @__PURE__ */ React.createElement("span", { className: "absolute inset-y-0 right-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" }),
-    /* @__PURE__ */ React.createElement("span", { className: "relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white" }, "Log in")
-  )))))));
-}
 function About() {
-  return /* @__PURE__ */ React.createElement("div", { class: "px-4 py-16 bg-green-800 " }, /* @__PURE__ */ React.createElement("section", { class: "max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12" }, /* @__PURE__ */ React.createElement("h2", { class: "max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-neutral-50 sm:text-4xl md:mx-auto" }, /* @__PURE__ */ React.createElement("span", { class: "relative inline-block" }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("div", { class: "bg-green-800 h-screen" }, /* @__PURE__ */ React.createElement("div", { class: "flex-grow px-4 py-16 bg-green-800 h-fit" }, /* @__PURE__ */ React.createElement("section", { class: "max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12" }, /* @__PURE__ */ React.createElement("h2", { class: "max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-neutral-50 sm:text-4xl md:mx-auto" }, /* @__PURE__ */ React.createElement("span", { class: "relative inline-block" }, /* @__PURE__ */ React.createElement(
     "svg",
     {
       viewBox: "0 0 52 24",
@@ -120,7 +92,7 @@ function About() {
       },
       /* @__PURE__ */ React.createElement("circle", { cx: "1", cy: "1", r: ".7" })
     ))
-  ), /* @__PURE__ */ React.createElement("span", { class: "relative" }, "Welcome our lovely devs"))), /* @__PURE__ */ React.createElement("p", { class: "text-base text-neutral-50 md:text-lg" }, "The masterminds behind the Santa, Please!")), /* @__PURE__ */ React.createElement("section", { class: "flex flex-col gap-3 items-center justify-center lg:flex-row text-neutral-50s" }, /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 rounded-xl border-neutral-50 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-lime-500 group" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col justify-center items-center gap-10" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col items-center gap-6" }, /* @__PURE__ */ React.createElement("div", { class: "flex gap-6 items-center" }, /* @__PURE__ */ React.createElement(
+  ), /* @__PURE__ */ React.createElement("span", { class: "relative " }, "Welcome our lovely devs"))), /* @__PURE__ */ React.createElement("p", { class: "text-base text-neutral-50 md:text-lg" }, "The masterminds behind the Santa, Please!")), /* @__PURE__ */ React.createElement("section", { class: "flex flex-col gap-3 items-center justify-center lg:flex-row text-neutral-50s" }, /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 rounded-xl border-neutral-50 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-lime-500 group" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col justify-center items-center gap-10" }, /* @__PURE__ */ React.createElement("div", { class: "flex flex-col items-center gap-6" }, /* @__PURE__ */ React.createElement("div", { class: "flex gap-6 items-center" }, /* @__PURE__ */ React.createElement(
     "img",
     {
       src: "https://avatars.githubusercontent.com/u/89877041?v=4",
@@ -180,7 +152,7 @@ function About() {
       class: "w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-slate-900 transition duration-200 rounded shadow-md bg-neutral-50 hover:bg-green-700 hover:scale-105"
     },
     "GitHub Repo"
-  )))));
+  ))))));
 }
 function Footer() {
   return /* @__PURE__ */ React.createElement("footer", { className: "bg-gray-200 text-center lg:text-left" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-700 text-center p-4" }, " ", "\xA9 2022 Copyright: Group 8", " "));

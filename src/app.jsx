@@ -316,10 +316,10 @@ function About() {
 									</h1>
 								</div>
 								<p className="transition duration-200 ease-linear text-neutral-50 hover:text-slate-900 text-center">
-									"Add what you did"
+									"I participated"
 								</p>
 								<p className="text-neutral-50 italic w-64 h-full transition duration-200 ease-linear hover:text-slate-900 text-center text-sm">
-									"Quotes?"
+									"This class was difficult, but I learned a lot"
 								</p>
 							</div>
 							<a
@@ -439,16 +439,35 @@ function LogIn() {
 									required=""
 								/>
 							</div>
-							<div className="mt-4">
-								<label className="block">Password</label>
-								<input
+							<div class="flex justify-center">
+								<div class="mb-3 xl:w-96">
+									<label for="examplePassword0" class="form-label inline-block mb-2 text-gray-700"
+									>Password input</label
+									>
+									<input
 									type="password"
-									name="password"
-									placeholder="Password"
-									className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-									required=""
-								/>
-							</div>
+									class="
+										form-control
+										block
+										w-full
+										px-3
+										py-1.5
+										text-base
+										font-normal
+										text-gray-700
+										bg-white bg-clip-padding
+										border border-solid border-gray-300
+										rounded
+										transition
+										ease-in-out
+										m-0
+										focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+									"
+									id="examplePassword0"
+									placeholder="Password input"
+									/>
+								</div>
+								</div>
 							<div className="flex items-baseline justify-between">
 								<button
 									type="submit"

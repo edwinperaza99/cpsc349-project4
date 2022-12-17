@@ -28,14 +28,64 @@ function App() {
   }
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(NavBar, null), /* @__PURE__ */ React.createElement(Component, null), /* @__PURE__ */ React.createElement(Footer, null));
 }
-function Main() {
-  return /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement("p", null, "Use NavBar"), /* @__PURE__ */ React.createElement("div", { className: "hero min-h-screen bg-base-200" }, /* @__PURE__ */ React.createElement("div", { className: "hero-content flex-col lg:flex-row" }, /* @__PURE__ */ React.createElement(
+function Main(props) {
+  return /* @__PURE__ */ React.createElement("main", { className: "bg-green-900 h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { className: "px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" }, /* @__PURE__ */ React.createElement("div", { className: "grid gap-10 lg:grid-cols-2" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400" }, /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: "https://github.com/edwinperaza99/cpsc349-project4",
+      target: "_blank",
+      rel: "noreferrer noopener"
+    },
+    /* @__PURE__ */ React.createElement(
+      "svg",
+      {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: 24,
+        height: 24,
+        viewBox: "0 0 24 24",
+        ...props
+      },
+      /* @__PURE__ */ React.createElement("path", { d: "M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" })
+    )
+  )), /* @__PURE__ */ React.createElement("div", { className: "max-w-xl mb-6" }, /* @__PURE__ */ React.createElement("h2", { className: "max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none" }, "CREATE YOUR", /* @__PURE__ */ React.createElement("br", { className: "hidden md:block" }), "FIRST WISHLIST", " ", /* @__PURE__ */ React.createElement("span", { className: "inline-block text-deep-purple-accent-400" }, "TODAY!")), /* @__PURE__ */ React.createElement("p", { className: "text-base text-gray-300 md:text-lg" }, "Santa, Please! Allows you to create wishlists with your favorite products. You can submit your wishlist to your loved ones (in the hopes to receive a present).")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: "/SignUp",
+      "aria-label": "",
+      className: "inline-flex items-center font-semibold transition-colors duration-200 text-white hover:text-red-600"
+    },
+    "Sign Up Now!",
+    /* @__PURE__ */ React.createElement(
+      "svg",
+      {
+        className: "inline-block w-3 ml-2",
+        fill: "currentColor",
+        viewBox: "0 0 12 12"
+      },
+      /* @__PURE__ */ React.createElement("path", { d: "M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" })
+    )
+  ))), /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center -mx-4 lg:pl-8" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-col items-end px-3" }, /* @__PURE__ */ React.createElement(
     "img",
     {
-      src: "https://placeimg.com/260/400/arch",
-      className: "max-w-sm rounded-lg shadow-2xl"
+      className: "object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56",
+      src: "https://images.pexels.com/photos/306864/pexels-photo-306864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: ""
     }
-  ), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", { className: "text-5xl font-bold" }, "Welcome!"), /* @__PURE__ */ React.createElement("p", { className: "py-6" }, "Create your own wishlist with all your favorite products. Send your wishlist to all your friends!"), /* @__PURE__ */ React.createElement("button", { className: "btn btn-primary" }, "Get Started")))));
+  ), /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      className: "object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40",
+      src: "https://images.pexels.com/photos/5727926/pexels-photo-5727926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: ""
+    }
+  )), /* @__PURE__ */ React.createElement("div", { className: "px-3" }, /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      className: "object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80",
+      src: "https://images.pexels.com/photos/3149896/pexels-photo-3149896.jpeg",
+      alt: ""
+    }
+  ))))));
 }
 function NavBar() {
   return /* @__PURE__ */ React.createElement("header", { className: "text-gray-400 bg-gray-900 body-font" }, /* @__PURE__ */ React.createElement("div", { className: "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" }, /* @__PURE__ */ React.createElement("a", { className: "flex title-font font-medium items-center text-white mb-4 md:mb-0" }, /* @__PURE__ */ React.createElement(
@@ -74,7 +124,7 @@ function NavBar() {
   )));
 }
 function About() {
-  return /* @__PURE__ */ React.createElement("div", { className: "bg-green-800 h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { className: "flex-grow px-4 py-16 bg-green-800 h-fit" }, /* @__PURE__ */ React.createElement("section", { className: "max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12" }, /* @__PURE__ */ React.createElement("h2", { className: "max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-neutral-50 sm:text-4xl md:mx-auto" }, /* @__PURE__ */ React.createElement("span", { className: "relative inline-block" }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("div", { className: "bg-green-900 h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { className: "flex-grow px-4 py-16 bg-green-900 h-fit" }, /* @__PURE__ */ React.createElement("section", { className: "max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12" }, /* @__PURE__ */ React.createElement("h2", { className: "max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-neutral-50 sm:text-4xl md:mx-auto" }, /* @__PURE__ */ React.createElement("span", { className: "relative inline-block" }, /* @__PURE__ */ React.createElement(
     "svg",
     {
       viewBox: "0 0 52 24",
@@ -158,7 +208,7 @@ function Footer() {
   return /* @__PURE__ */ React.createElement("footer", { className: "bg-gray-200 text-center lg:text-left" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-700 text-center p-4" }, " ", "\xA9 2022 Copyright: Group 8", " "));
 }
 function SignUp() {
-  return /* @__PURE__ */ React.createElement("main", { class: "flex-grow" }, /* @__PURE__ */ React.createElement("div", { class: "flex items-center justify-center h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { class: "px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h2", { class: "text-2xl font-bold text-center" }, "Create Your Account Today!"), /* @__PURE__ */ React.createElement("form", { action: "/user/signup", method: "post" }, /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("label", { class: "block" }, "Username"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("main", { class: "bg-green-900 flex-grow" }, /* @__PURE__ */ React.createElement("div", { class: "flex items-center justify-center h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { class: "bg-red-700 text-white rounded-xl border-neutral-50 border-4 border-solid px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h2", { class: "text-2xl font-bold text-center" }, "Create Your Account Today!"), /* @__PURE__ */ React.createElement("form", { action: "/user/signup", method: "post" }, /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("div", { class: "mt-4" }, /* @__PURE__ */ React.createElement("label", { class: "block" }, "Username"), /* @__PURE__ */ React.createElement(
     "input",
     {
       type: "text",
@@ -189,13 +239,13 @@ function SignUp() {
     "button",
     {
       type: "submit",
-      class: "px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+      class: "px-6 py-2 mt-4 text-white bg-green-600 rounded-lg hover:bg-green-900"
     },
     "Sign up"
   )))))));
 }
 function LogIn() {
-  return /* @__PURE__ */ React.createElement("main", { className: "flex-grow" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { className: "px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h3", { className: "text-2xl font-bold text-center" }, "Log in to your account"), /* @__PURE__ */ React.createElement("form", { action: "/user/login", method: "post" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("label", { className: "block" }, "Username"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("main", { className: "bg-green-900 flex-grow" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { className: "bg-red-700 text-white rounded-xl border-neutral-50 border-4 border-solid px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h3", { className: "text-2xl font-bold text-center" }, "Log in to your account"), /* @__PURE__ */ React.createElement("form", { action: "/user/login", method: "post" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("label", { className: "block" }, "Username"), /* @__PURE__ */ React.createElement(
     "input",
     {
       type: "text",
@@ -217,20 +267,20 @@ function LogIn() {
     "button",
     {
       type: "submit",
-      className: "px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+      className: "px-6 py-2 mt-4 text-white bg-green-600 rounded-lg hover:bg-green-900"
     },
     "Login"
   ), /* @__PURE__ */ React.createElement(
     "a",
     {
       href: "/Forgot",
-      className: "text-sm text-blue-600 hover:underline"
+      className: "text-sm text-gray-900 hover:underline"
     },
     "Forgot password?"
   )))))));
 }
 function Forgot() {
-  return /* @__PURE__ */ React.createElement("main", { className: "flex-grow" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center h-full my-40" }, /* @__PURE__ */ React.createElement("div", { className: "px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h3", { className: "text-2xl font-bold text-center" }, "Forgot your password?"), /* @__PURE__ */ React.createElement("p", { className: "mt-4" }, "We will send a link to your associated email account"), /* @__PURE__ */ React.createElement("form", { action: "/user/forgot", method: "post" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("div", { className: "" }, /* @__PURE__ */ React.createElement("label", { className: "block font-bold" }, "Username"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("main", { className: "bg-green-900 flex-grow" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-center h-[calc(100vh-136px)]" }, /* @__PURE__ */ React.createElement("div", { className: "bg-red-700 text-white rounded-xl border-neutral-50 border-4 border-solid px-8 py-6 mt-4 text-left bg-grey-100 shadow-lg" }, /* @__PURE__ */ React.createElement("h3", { className: "text-2xl font-bold text-center" }, "Forgot your password?"), /* @__PURE__ */ React.createElement("p", { className: "mt-4" }, "We will send a link to your associated email account"), /* @__PURE__ */ React.createElement("form", { action: "/user/forgot", method: "post" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("div", { className: "" }, /* @__PURE__ */ React.createElement("label", { className: "block font-bold" }, "Username"), /* @__PURE__ */ React.createElement(
     "input",
     {
       type: "text",
@@ -243,7 +293,7 @@ function Forgot() {
     "button",
     {
       type: "submit",
-      className: "px-6 py-2 mt-8 w-full text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+      className: "px-6 py-2 mt-8 w-full text-white bg-green-600 rounded-lg hover:bg-green-900"
     },
     "Reset my password"
   )))))));

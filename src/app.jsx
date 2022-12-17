@@ -348,8 +348,19 @@ function Footer() {
 	);
 }
 //
+// function handleInputChange() {
+// 	//
+// }
+// function handleSignUp() {
+// 	//
+// }
 
 function SignUp() {
+	// const [email, setEmail] = useState("");
+	// const [update, setUpdate] = useState(email);
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+	};
 	return (
 		<main class="bg-green-900 flex-grow">
 			<div class="flex items-center justify-center h-[calc(100vh-136px)]">
@@ -357,7 +368,7 @@ function SignUp() {
 					<h2 class="text-2xl font-bold text-center">
 						Create Your Account Today!
 					</h2>
-					<form action="/user/signup" method="post">
+					<form onSubmit={handleSubmit}>
 						<div class="mt-4">
 							<div class="mt-4">
 								<label class="block">Username</label>
@@ -365,8 +376,9 @@ function SignUp() {
 									type="text"
 									name="username"
 									placeholder="Username"
-									class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-									required
+									class="w-full text-black px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+									// value={email}
+									// onChange=""
 								/>
 							</div>
 							<div class="mt-4">
@@ -376,7 +388,8 @@ function SignUp() {
 									name="email"
 									placeholder="Email"
 									class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-									required
+									value=""
+									onChange=""
 								/>
 							</div>
 							<div class="mt-4">
@@ -386,7 +399,8 @@ function SignUp() {
 									name="password"
 									placeholder="Password"
 									class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-									required
+									value=""
+									onChange=""
 								/>
 							</div>
 							<div class="flex items-baseline justify-between">

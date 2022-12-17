@@ -16,8 +16,8 @@ function App() {
     case "/About":
       Component = About;
       break;
-    case "/SignIn":
-      Component = SignIn;
+    case "/SignUp":
+      Component = SignUp;
       break;
     case "/Forgot":
       Component = Forgot;
@@ -51,7 +51,7 @@ function NavBar() {
       viewBox: "0 0 24 24"
     },
     /* @__PURE__ */ React.createElement("path", { d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" })
-  ), /* @__PURE__ */ React.createElement("span", { className: "ml-3 text-xl" }, "Santa, Please!")), /* @__PURE__ */ React.createElement("nav", { className: "md:ml-auto flex flex-wrap items-center text-base justify-center" }, /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white", href: "/About" }, "About Us"), /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white", href: "/SignUp" }, "Sign Up")), /* @__PURE__ */ React.createElement(
+  ), /* @__PURE__ */ React.createElement("a", { className: "ml-3 text-xl", href: "/" }, "Santa, Please!")), /* @__PURE__ */ React.createElement("nav", { className: "md:ml-auto flex flex-wrap items-center text-base justify-center" }, /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white", href: "/About" }, "About Us"), /* @__PURE__ */ React.createElement("a", { className: "mr-5 hover:text-white", href: "/SignUp" }, "Sign Up")), /* @__PURE__ */ React.createElement(
     "button",
     {
       className: "inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0",
@@ -78,7 +78,7 @@ function SecondNav() {
     "a",
     {
       className: "block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-300",
-      href: "/aboutus",
+      href: "/About",
       "aria-label": "About us",
       title: "About us"
     },
@@ -87,7 +87,7 @@ function SecondNav() {
     "a",
     {
       className: "group relative inline-block overflow-hidden border border-blue-300 px-8 py-3 focus:outline-none focus:ring",
-      href: "/user/signup"
+      href: "/SignUp"
     },
     /* @__PURE__ */ React.createElement("span", { className: "absolute inset-y-0 left-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" }),
     /* @__PURE__ */ React.createElement("span", { className: "relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white" }, "Sign up")
@@ -95,7 +95,7 @@ function SecondNav() {
     "a",
     {
       className: "group relative inline-block overflow-hidden border border-blue-300 px-9 py-3 focus:outline-none focus:ring",
-      href: "/user/login"
+      href: "LogIn"
     },
     /* @__PURE__ */ React.createElement("span", { className: "absolute inset-y-0 right-0 w-[2px] bg-blue-300 transition-all group-hover:w-full group-active:bg-indigo-500" }),
     /* @__PURE__ */ React.createElement("span", { className: "relative text-sm font-medium text-blue-300 transition-colors group-hover:text-white" }, "Log in")

@@ -91,7 +91,9 @@ function NavBar() {
 					>
 						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
 					</svg>
-					<span className="ml-3 text-xl">Santa, Please!</span>
+					<a className="ml-3 text-xl" href="/">
+						Santa, Please!
+					</a>
 				</a>
 				<nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
 					<a className="mr-5 hover:text-white" href="/About">
